@@ -13,13 +13,13 @@ var Repo *Repository
 
 // Repository is the repository type
 type Repository struct {
-	AppConfig *config.AppConfig
+	App *config.App
 }
 
 // NewRepo creates a new repository.
-func NewRepo(ac *config.AppConfig) *Repository {
+func NewRepo(ac *config.App) *Repository {
 	return &Repository{
-		AppConfig: ac,
+		App: ac,
 	}
 }
 

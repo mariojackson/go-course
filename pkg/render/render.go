@@ -13,11 +13,11 @@ import (
 )
 
 var functions = template.FuncMap{}
-var appConfig *config.AppConfig
+var app *config.App
 
 // NewTemplates set the config for the template package.
-func NewTemplates(ac *config.AppConfig) {
-	appConfig = ac
+func NewTemplates(ac *config.App) {
+	app = a
 }
 
 func AddDefaultData(td *models.TemplateData) *models.TemplateData {
@@ -28,8 +28,8 @@ func AddDefaultData(td *models.TemplateData) *models.TemplateData {
 func Template(w http.ResponseWriter, tmpl string, td *models.TemplateData) {
 	var tc map[string]*template.Template
 
-	if appConfig.UseCache {
-		tc = appConfig.TemplateCache
+	if app.UseCache {
+		tc = app.TemplateCache
 	} else {
 		tc, _ = CreateTemplateCache()
 	}

@@ -9,7 +9,7 @@ import (
 	"github.com/mariojackson/go-course/pkg/handlers"
 )
 
-func routes(appConfig *config.AppConfig) http.Handler {
+func routes(app *config.App) http.Handler {
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)

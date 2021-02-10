@@ -16,7 +16,7 @@ var functions = template.FuncMap{}
 var app *config.App
 
 // NewTemplates set the config for the template package.
-func NewTemplates(ac *config.App) {
+func NewTemplates(a *config.App) {
 	app = a
 }
 
